@@ -1,7 +1,7 @@
 body{
     margin:0;
     padding: 0;
-    height: 100%;
+    height: 100vh;
 }
 
 .container{
@@ -11,6 +11,9 @@ body{
     padding: 0 10px;
     grid-row-start: 1;
     grid-row-end: 2;
+    display: flex;
+   flex-direction: column;
+   min-height: 100%;
 }
 
              /* this is navbar    */
@@ -71,6 +74,7 @@ form{
     width: 638px;
     width: auto;
     max-width: 584px;
+    height: 46px;
 }
 
 .btn1:hover{
@@ -79,12 +83,13 @@ form{
     border-color: rgba(223,225,229,0);
 }
  
-/* ------  ax class used for search button ----------- */
+  /* ------  ax class used for search button ----------- */
 
 .ax{
     flex: 1;
     display: flex;
     padding: 4px 8px 0 14px;
+    overflow: hidden;
 }
 
 ::placeholder{
@@ -169,8 +174,14 @@ a:hover{
                             /* footer */
 
 .footer{
-    background-color: #fff;
+    background-color: #f8f9fa;
     margin-top: auto;
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+
 }
 
 .india{
@@ -178,6 +189,8 @@ a:hover{
     border-bottom: 1px solid #dadce0;
     font-size: 15px;
     color: #70757a;
+    text-align: left;
+    font-family: arial,sans-serif;
 }
 
 .asd{
@@ -197,16 +210,118 @@ a:hover{
     color: #70757a;
     display: inline-block;
     padding: 15px;
+    font-size: 14px;
+    font-family: arial,sans-serif;
 }
 
 button{
     cursor: pointer;
     display: inline-block;
     border: 1px solid #fff;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding-right: 13px;
+    height: 46px;
+    background-color: #fff;
 }
+
 a{
     color: #70757a;
     text-decoration: none ;
     font-size: 14px;
     font-family: Arial, sans-serif;
+}
+
+#icon1{
+    color: #9aa0a6;
+    display: block;
+    width: 100%;
+    /* background-color: #fff; */
+}
+
+.qaz{
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}
+
+textarea.search-area{
+    font-family: arial,sans-serif;
+    line-height: 22px;
+    overflow: hidden;
+}
+
+.search-area{
+    line-height: 34px;
+    resize: none;
+    background-color: transparent;
+    border: none;
+    resize: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    word-wrap: break-word;
+    outline: none;
+}
+
+.space{
+    color: transparent;
+    white-space: pre;
+    position: absolute;
+    pointer-events: none;
+}
+
+.search-area, .space{
+    flex: 100%;
+    font-size: 16px;
+
+}
+
+.qwerty{
+    display: flex;
+    flex: 0 0 auto;
+    margin-top: -5px;
+    align-items: stretch;
+    flex-direction: row;
+    height: 44px;
+    padding: 5px 0px;
+}
+
+#cross{
+    background: transparent;
+    border: 0;
+    align-items: center;
+    flex: 1 0 auto;
+    cursor: pointer;
+    /* display: none; */
+    height: 100%;
+    line-height: 44px;
+    outline: none;
+    padding: 0 12px;
+}
+
+#micro{
+    flex: 1 0 auto;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    border: 0;
+    background: transparent;
+    outline: none;
+    padding: 0 8px;
+    line-height: 44px;
+}
+
+#camera{
+    flex: 1 0 auto;
+    cursor: pointer;
+    align-items: center;
+    border: 0;
+    background: transparent;
+    outline: none;
+    padding: 0 8px;
+    width: 24px;
+    line-height: 44px;
 }
